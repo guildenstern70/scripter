@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wno-long-long -pedantic -std=c++11   CMakeFiles/Scripter.dir/src/main.cpp.o CMakeFiles/Scripter.dir/src/worder.cpp.o  -o Scripter -rdynamic 

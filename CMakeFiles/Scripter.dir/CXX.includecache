@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alessio/Codice/c++/scripter/src/main.cpp
+iostream
+-
+memory
+-
+sstream
+-
+worder.h
+/home/alessio/Codice/c++/scripter/src/worder.h
+
+/home/alessio/Codice/c++/scripter/src/worder.cpp
+iostream
+-
+fstream
+-
+memory
+-
+ctime
+-
+worder.h
+/home/alessio/Codice/c++/scripter/src/worder.h
+
+/home/alessio/Codice/c++/scripter/src/worder.h
+string
+-
+vector
+-
+random
+-
+
