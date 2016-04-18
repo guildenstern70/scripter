@@ -1,37 +1,35 @@
 //============================================================================
-// Name        : Worder.cpp
+// Name        : Lyricist.cpp
 // Author      : Alessio Saltarin
 // Version     :
 // Copyright   : (C) Alessio Saltarin 2016
-// Description : Worder
+// Description : Lyricist
 //============================================================================
 
 #include <iostream>
 #include <fstream>
-#include <memory>
-#include <ctime>
 
-#include "worder.h"
+#include "lyricist.h"
 
-Worder::Worder()
+Lyricist::Lyricist()
 {
-    std::srand(std::time(0));
+    std::srand((unsigned int) std::time(0));
     this->wordsContainer = new std::vector<std::string>();
 }
 
-Worder::~Worder()
+Lyricist::~Lyricist()
 {
     delete wordsContainer;
 }
 
-const std::string& Worder::getRandomWord() const
+const std::string& Lyricist::getRandomWord() const
 {
-    int nrWords = this->wordsContainer->size();
-    int index = rand() % nrWords + 1;
+    ulong nrWords = this->wordsContainer->size();
+    ulong index = rand() % nrWords + 1;
     return this->wordsContainer->at(index);
 }
 
-int Worder::loadWords()
+ulong Lyricist::loadWords()
 {
     std::cout << "Reading words..." << std::endl;
     std::string line;

@@ -1,12 +1,16 @@
+# Scripter
+
 Scripter is a fuzzy, subnormal, completely useless random phrases generator - in English.
 
 
-*** Building Scripter
+## Build
 
-1. Run
+Create build scripts
+
     cmake .
 
-2. Run
+Compile & Link
+
     make
 
    

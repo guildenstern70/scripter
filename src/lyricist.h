@@ -1,27 +1,29 @@
 //============================================================================
-// Name        : Worder.h
+// Name        : Lyricist.h
 // Author      : Alessio Saltarin
 // Version     :
 // Copyright   : (C) Alessio Saltarin 2016
-// Description : Worder
+// Description : Lyricist
 //============================================================================
 
-#ifndef WORDER_H
-#define WORDER_H
+#ifndef LYRICIST_H
+#define LYRICIST_H
 
 #include <string>
 #include <vector>
 #include <random>
 
-class Worder
+typedef unsigned long ulong;
+
+class Lyricist
 {
 public:
-	Worder();
-	int loadWords();
+	Lyricist();
+	ulong loadWords();
 	const std::string& getRandomWord() const;
-	virtual ~Worder();
+	virtual ~Lyricist();
 private:
     std::vector<std::string>* wordsContainer;
 };
 
-#endif /* WORDER_H */
+#endif /* LYRICIST_H */

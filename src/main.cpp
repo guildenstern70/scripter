@@ -3,34 +3,26 @@
 // Author      : Alessio Saltarin
 // Version     :
 // Copyright   : (C) Alessio Saltarin 2016
-// Description : Worder
+// Description : Lyricist
 //============================================================================
 
 #include <iostream>
-#include <memory>
-#include <sstream>
-
-#include "worder.h"
+#include "director.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Worder v.0.2" << endl;
-    auto worder = std::make_shared<Worder>();
-    int wordsNum = worder->loadWords();
-    cout << "Loaded " << wordsNum << " words." << endl;
+    cout << "Lyricist v.0.2" << endl;
+    auto director = std::make_shared<Director>();
+
+    cout << endl << "Press 'CTRL+C to exit" << endl;
     cout << endl;
 
-    string ss = ">";
-
-    for (int j=0; j<100; j++)
+    while (true)
     {
-        ss += " ";
-        ss += worder->getRandomWord();
+        director->printPhrase();
     }
-
-    cout << ss << endl;
 
     return 0;
 }

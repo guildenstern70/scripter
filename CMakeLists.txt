@@ -4,7 +4,7 @@ project(Scripter)
 set(CMAKE_CXX_FLAGS "-Wall -Wno-long-long -pedantic -std=c++11")
 
 set(SOURCE_FILES    src/main.cpp
-                    src/worder.h
-                    src/worder.cpp)
+        src/lyricist.h
+        src/lyricist.cpp src/director.cpp src/director.h)
 
 add_executable(Scripter ${SOURCE_FILES})
