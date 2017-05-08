@@ -6,8 +6,8 @@
 #define SCRIPTER_DIRECTOR_H
 
 #define MAX_PHRASE_WORDS 10
-#define MAX_WAIT_MSECS 2000
-#define MIN_WAIT_MSECS 150
+#define MAX_WAIT_MSECS 1800
+#define MIN_WAIT_MSECS 100
 
 #include "lyricist.h"
 
@@ -28,6 +28,8 @@ public:
     virtual ~Director();
     void makePause(PauseKind pauseKind);
     void printPhrase();
+    void addFinalPunctuation();
+    void addPunctuation();
 
 };
 

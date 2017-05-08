@@ -8,3 +8,5 @@ set(SOURCE_FILES    src/main.cpp
         src/lyricist.cpp src/director.cpp src/director.h)
 
 add_executable(Scripter ${SOURCE_FILES})
+
+configure_file("wordsEn.txt" "." COPYONLY)

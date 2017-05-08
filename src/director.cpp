@@ -5,7 +5,6 @@
 #include "director.h"
 
 #include <iostream>
-#include <string>
 #include <thread>
 
 Director::Director()
@@ -44,14 +43,18 @@ void Director::printPhrase()
     for (int j=0; j<phraseSize; j++)
     {
         std::string rndString = this->lyrics->getRandomWord();
-        if (j==0) rndString[0] = toupper(rndString[0]);
+        if (j==0) rndString[0] = static_cast <char>(toupper(rndString[0]));
         std::cout << " ";
         std::cout << rndString;
-        this->makePause(PauseKind::SMALL);
+        if (j != phraseSize - 1)
+        {
+            this->addPunctuation();
+            this->makePause(PauseKind::SMALL);
+        }
         std::cout << std::flush;
     }
 
-    std::cout << "..." << std::endl;
+    this->addFinalPunctuation();
 
     int kindOfPause = rand() % 6;
 
@@ -68,6 +71,44 @@ void Director::printPhrase()
         this->makePause(PauseKind::RANDOM);
     }
 
+}
+
+void Director::addFinalPunctuation()
+{
+    int punctuationIdx = rand() % 5;
+
+    if (punctuationIdx == 0)
+    {
+        std::cout << "..." << std::endl;
+    }
+    else if (punctuationIdx == 1)
+    {
+        std::cout << "?" << std::endl;
+    }
+    else
+    {
+        std::cout << "." << std::endl;
+    }
+
+}
+
+void Director::addPunctuation()
+{
+    int punctuationIdx = rand() % 20;
+
+    if (punctuationIdx <= 3)
+    {
+        std::cout << ",";
+    }
+    else if (punctuationIdx == 4)
+    {
+        std::cout << ";";
+    }
+    else if (punctuationIdx == 5)
+    {
+        std::cout << " - ";
+    }
+    // else do nothing
 }
 
 
