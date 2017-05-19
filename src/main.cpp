@@ -6,6 +6,7 @@
 // Description : Lyricist
 //============================================================================
 
+#include <memory>
 #include <iostream>
 #include "director.h"
 
