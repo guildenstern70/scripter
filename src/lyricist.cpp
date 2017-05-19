@@ -6,6 +6,7 @@
 // Description : Lyricist
 //============================================================================
 
+#include <ctime>
 #include <iostream>
 #include <fstream>
 
